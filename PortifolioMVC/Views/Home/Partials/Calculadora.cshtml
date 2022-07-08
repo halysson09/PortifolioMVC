@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Calculadora";
+}
+
+<div id="calculadora">
+    <div id="divCalculadora">
+        <input type="hidden" id="primeiroNumero" />
+        <input type="hidden" id="segundoNumero" />
+        <input type="hidden" id="operador" />
+        <input type="hidden" id="total" />
+
+        <div class="conteinerCalculadora">
+            <div class="numeros border-All" id="visor">0</div>
+            <div onclick="montarCalculo('C', 'operador')" class="click botoes numeros border-BL" id="btn-C">C</div>
+            <div onclick="montarCalculo('/', 'operador')" class="click botoes numeros border-BL" id="btn-Dividir">/</div>
+            <div onclick="montarCalculo('%', 'operador')" class="click botoes numeros border-BL" id="btn-Porcentagem">%</div>
+            <div onclick="montarCalculo('<-', 'operador')" class="click botoes numeros border-RBL" id="btn-Apagar">⌫</div>
+            <div onclick="montarCalculo('7', 'numero')" class="click botoes numeros border-BL" id="btn-7">7</div>
+            <div onclick="montarCalculo('8', 'numero')" class="click botoes numeros border-BL" id="btn-8">8</div>
+            <div onclick="montarCalculo('9', 'numero')" class="click botoes numeros border-BL" id="btn-9">9</div>
+            <div onclick="montarCalculo('*', 'operador')" class="click botoes numeros border-RBL" id="btn-Vezes">*</div>
+            <div onclick="montarCalculo('4', 'numero')" class="click botoes numeros border-BL" id="btn-4">4</div>
+            <div onclick="montarCalculo('5', 'numero')" class="click botoes numeros border-BL" id="btn-5">5</div>
+            <div onclick="montarCalculo('6', 'numero')" class="click botoes numeros border-BL" id="btn-6">6</div>
+            <div onclick="montarCalculo('-', 'operador')" class="click botoes numeros border-RBL" id="btn-Menos">-</div>
+            <div onclick="montarCalculo('1', 'numero')" class="click botoes numeros border-BL" id="btn-1">1</div>
+            <div onclick="montarCalculo('2', 'numero')" class="click botoes numeros border-BL" id="btn-2">2</div>
+            <div onclick="montarCalculo('3', 'numero')" class="click botoes numeros border-BL" id="btn-3">3</div>
+            <div onclick="montarCalculo('+', 'operador')" class="click botoes numeros border-RBL" id="btn-Mais">+</div>
+            <div onclick="montarCalculo('0', 'numero')" class="click numeros bBottom border-BL" style="width:140px;height:45px" id="btn-0">0</div>
+            <div onclick="montarCalculo(',', 'numero')" class="click botoes numeros border-BL" id="btn-Virgula">,</div>
+            <div onclick="montarCalculo('=', 'operador')" class="click botoes numeros border-RBL" id="btn-Igual">=</div>
+        </div>
+    </div>
+</div>
+
+
+
+

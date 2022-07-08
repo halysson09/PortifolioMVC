@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Jogos";
+}
+
+<div id="jogos">
+    <div id="divJogos">
+        <div id="formulario">
+            <input type="hidden" id="idJogos" />
+            <div class="form-group">
+                <label for="nomeJogo">Nome do Jogo</label>
+                <input type="text" class="form-control" id="nomeJogo" placeholder="GTA 5">
+            </div>
+            <div class="form-group">
+                <label for="genero">Gênero</label>
+                <select class="form-select" id="genero">
+                    <option selected></option>
+                    <option>ACTION</option>
+                    <option>ADVENTURE</option>
+                    <option>FPS</option>
+                    <option>MMORPG</option>
+                    <option>MOBA</option>
+                    <option>RACING</option>
+                    <option>RPG</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Data de Lançamento</label>
+                <input type="date" class="form-control" id="date" value="" />
+            </div>
+            <div style="width:158px; display:flex; flex-direction:column">
+                <label for="disponivel">Disponível Em</label>
+                <div style="display:flex; justify-content:space-between; margin-top:10px">
+                    <div class="custom-control custom-checkbox" id="div-check1">
+                        <input type="checkbox" class="custom-control-input" id="steam">
+                        <label class="custom-control-label" for="customCheck1">Steam</label>
+                    </div>
+                    <div class="custom-control custom-checkbox" id="div-check2">
+                        <input type="checkbox" class="custom-control-input" id="origin">
+                        <label class="custom-control-label" for="customCheck1">Origin</label>
+                    </div>
+                </div>
+            </div>
+            <div id="div-Salvar">
+                <button onclick="gravarRegistro()" class="btn-Formulario">
+
+                    <img style="padding-bottom:7px" src="~/lib/bootstrap/Icones/svg/check-lg.svg" />
+                </button>
+                <button onclick="limparFormulario()" class="btn-Formulario">
+                    <img style="padding-bottom:7px" src="~/lib/bootstrap/Icones/svg/x.svg" />
+                </button>
+            </div>
+        </div>
+
+        <div style="width: 764px; margin-top: 20px; text-align: center">
+            <table id="tabelaFormulario" class="table table-light table-bordered">
+                <tbody id="bodyTabela">
+                    <tr class="corText">
+                        <th class="corTitulo">Jogos</th>
+                        <th class="corTitulo">Gênero</th>
+                        <th class="corTitulo">Data</th>
+                        <th class="corTitulo">Steam</th>
+                        <th class="corTitulo">Origin</th>
+                        <th class="corTitulo">Opções</th>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

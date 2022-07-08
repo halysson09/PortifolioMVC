@@ -18,9 +18,9 @@ namespace PortifolioMVC.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public ActionResult ChangePartial(string partialName)
         {
-            return View();
+            return PartialView(partialName);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

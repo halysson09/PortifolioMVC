@@ -1,8 +1,26 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+﻿
+<div style="width: 100%; height: 300px; border-bottom: 3px solid #FFFEFE">
+    <div id="imgEu">
+        <img style="height:235px" src="~/images/EU.jpg" />
+    </div>
+    <div id="divNome">Halysson Darago</div>
 </div>
+
+<!-- Nav tabs -->
+<ul class="nav nav-pills flex-column" id="myTab">
+    <li class="nav-item" role="presentation">
+        <button style="width:128px" onclick="changePartial('Partials/SobreMim')" class="nav-link active" aria-current="page" data-bs-toggle="tab" >SobreMim</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button style="width:128px" onclick="changePartial('Partials/Calculadora')" class="nav-link" data-bs-toggle="tab" >Calculadora</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button style="width:128px" onclick="changePartial('Partials/Jogos')" class="nav-link" data-bs-toggle="tab" >Jogos</button>
+    </li>
+</ul>
+
+<div id="partialContent">
+    @*@Html.Partial("Partials/SobreMim")*@
+    <partial name="Partials/SobreMim" />
+</div>
+
