@@ -1,10 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Matrix";
-}
-<!DOCTYPE html>
-<html>
-
-<head>
+﻿
     <title>Matrix</title>
     <style>
         body {
@@ -13,10 +7,12 @@
             overflow: hidden;
         }
     </style>
-</head>
+<div class="voltar"> <a href="~/Home/Index">Sair da Matrix</a></div>
 
-<body>
+<div>
     <canvas id="canv"></canvas>
+</div> 
+
     <script>
         const canvas = document.getElementById('canv');
         const ctx = canvas.getContext('2d');
@@ -47,6 +43,6 @@
         }
         setInterval(desenhaMatrix, 50);
     </script>
-</body>
-</html>
 
+
+       
