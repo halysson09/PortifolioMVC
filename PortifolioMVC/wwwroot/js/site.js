@@ -31,7 +31,6 @@ function calcular(operador, valor1, valor2, porcentagem) {
 
     return resultado.toString().replace('.', ',');
 }
-
 function montarCalculo(valor, tipo) { // Função para montar o cálculo na tab calculadora.
     var visor = document.getElementById('visor').innerText;
     var primeiroNumero = document.getElementById('primeiroNumero').innerText;
@@ -342,7 +341,6 @@ document.addEventListener("keyup", function pressionarTecla(tecla) {
 });
 
 
-
 function validaCamposFormulario(nome, genero, date) {
     if (nome == '' || genero == '' || date == '') {
         alert('<---------MACACO--------->');
@@ -440,4 +438,23 @@ function limparFormulario() {
     document.getElementById('date').value = '';
     document.getElementById('genero').selectedIndex = 0;
 }
+
+//function desenhaMatrix() {
+//    ctx.fillStyle = '#0001';
+//    ctx.fillReact(0, 0, w, h);
+
+//    ctx.fillStyle = '#0f0';
+//    ctx.font = '15pt monospace';
+
+//    yPos.forEach((y, ind) => {
+//        const text = String.fromCharCode(math.random() * 128);
+//        const x = ind * 20;
+//        ctx.fillText(text, x, y);
+
+//        if (y > 100 + math.random() * 1000) yPos[ind] = 0;
+//        else yPos[ind] = y + 20;
+//    });
+        
+//}
+    
 

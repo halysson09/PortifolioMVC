@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Matrix";
+}
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        widows: 100vw;
+        overflow: hidden;
+    }
+</style>
+
+    <canvas width="500" height="200" id="canv"> </canvas>
+    <script>
+        const canvas = document.getElementById('canv');
+        const ctx = canvas.getContext('2d');
+        const w = canvas.width = document.body.offsetWidth;
+        const h = canvas.height = document.body.offsetHeight;
+        const cols = Math.floor(w / 20) + 1;
+        const yPos = Array(cols).fill(0);
+
+        ctx.fillStyle = '#000';
+        ctx.fillReact(0, 0, w, h);
+       
+        function desenhaMatrix() {
+            ctx.fillStyle = '#0001';
+            ctx.fillReact(0, 0, w, h);
+
+            ctx.fillStyle = '#0f0';
+            ctx.font = '15pt monospace';
+
+            yPos.forEach((y, ind) => {
+                const text = String.fromCharCode(math.random() * 128);
+                const x = ind * 20;
+                ctx.fillText(text, x, y);
+
+                if (y > 100 + math.random() * 1000) yPos[ind] = 0;
+                else yPos[ind] = y + 20;
+            });
+
+        }
+         setInterval(desenhaMatrix, 50);
+    </script>
+
+
